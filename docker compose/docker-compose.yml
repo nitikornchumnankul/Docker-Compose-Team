@@ -1,0 +1,10 @@
+version: '3.5'
+services:
+  angular-compose1:
+      build: docker-angular
+      ports:
+       - 4200:4200
+  angular-compose2:
+      build: docker-angular1
+      ports:
+       - 4201:4200
