@@ -1,0 +1,44 @@
+<mat-card class="card-table">
+    <p>สมาชิกในกลุ่ม</p>
+  <div class="table">
+      <mat-form-field>
+          <input matInput (keyup)="applyFilter($event.target.value)" placeholder="ค้นหา">
+      </mat-form-field>
+    <table mat-table [dataSource]="dataSource">
+  
+      <!-- no Column -->
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> id. </th>
+        <td ma-cell *matCellDef="let element"> {{element.id}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="nametitle">
+          <th mat-header-cell *matHeaderCellDef> คำนำหน้า</th>
+          <td ma-cell *matCellDef="let element"> {{element.nametitle}} </td>
+        </ng-container>
+  
+      <!-- ชื่อ-->
+      <ng-container matColumnDef="firstname">
+        <th mat-header-cell *matHeaderCellDef> ชื่อ</th>
+        <td mat-cell *matCellDef="let element"> {{element.firstname}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="lastname">
+          <th mat-header-cell *matHeaderCellDef> นามสกุล </th>
+          <td mat-cell *matCellDef="let element"> {{element.lastname}} </td>
+        </ng-container>
+
+      <!--  รหัสนักศึกษา -->
+      <ng-container matColumnDef="studentId">
+          <th mat-header-cell *matHeaderCellDef> รหัสนักศึกษา </th>
+          <td mat-cell *matCellDef="let element"> {{element.studentId}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  
+    <mat-paginator [pageSizeOptions]="[2, 5, 10]" showFirstLastButtons></mat-paginator>
+  
+  </div>
+</mat-card>
