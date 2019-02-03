@@ -1,0 +1,8 @@
+table {
+    width: 100%;
+  }
+.card-table {
+    max-width: 1200px;
+    min-width: 800px;
+    margin: auto;
+}
