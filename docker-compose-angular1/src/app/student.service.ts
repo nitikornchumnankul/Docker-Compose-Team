@@ -11,7 +11,7 @@ export class StudentService {
   constructor(private http: HttpClient) { }
 
   getList(): Observable<any> {
-    return this.http.get('http://localhost:8080/student');
+    return this.http.get('http://192.168.99.100:8080/student');
     console.log("hello")
   }
 }
