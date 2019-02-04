@@ -13,7 +13,7 @@ import java.sql.Date;
 import java.time.LocalDate;
 
 @RestController
-@CrossOrigin(origins =  "http://localhost:4200")
+@CrossOrigin(origins =  "http://192.168.99.100:4200")
 public class StudentController {
     @Autowired     private StudentRepository studentRepository;
 
