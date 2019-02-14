@@ -1,0 +1,16 @@
+version: 
+services: 
+  backend:
+    image: 
+    container_name:
+    restart: always
+    depends_on:
+      - 
+    ports:
+      - 8080:8080
+    environment:
+      - DATABASE_HOST=
+      - DATABASE_USER=
+      - DATABASE_PASSWORD=
+      - DATABASE_NAME= 
+      - DATABASE_PORT=
